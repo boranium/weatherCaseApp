@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bsoft.weathercaseapp.ui.details.DetailsFragment">
+
+    <TextView
+        android:id="@+id/details_day_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#cfffffff"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/details_night_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#cfffffff"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/details_day_degree"
+        app:layout_constraintTop_toTopOf="@+id/details_day_degree" />
+
+    <ProgressBar
+        android:id="@+id/details_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:indeterminateTint="#a0ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/details_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#ffffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/details_day_degree"
+        app:layout_constraintStart_toStartOf="@+id/details_day_degree"
+        app:layout_constraintTop_toBottomOf="@+id/details_day_degree" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_daysList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_state" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
